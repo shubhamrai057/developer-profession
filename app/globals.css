@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fff;
+  position: relative;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.section {
+  padding: 80px 50px 10px;
+  position: relative;
+}
+.center:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 55%;
+  background: #fcead7;
+}
+.image img {
+  max-width: 100%;
+}
+.center {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.name {
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 20px;
+  color: #e04826;
+}
+.header1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #e04826;
+  position: relative;
+}
+.header1:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  left: 266px;
+  right: 0;
+  background: #e04826;
+  top: 50%;
+}
+.header1 span {
+  padding: 5px 10px;
+  display: inline-block;
+  border: 1px solid #e04826;
+  width: 245px;
+  text-align: center;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+ol {
+  margin: 0;
+}
+ol li {
+  margin: 5px 0;
+}
+.box {
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+}
+.box:last-child {
+  margin-bottom: 0;
+}
